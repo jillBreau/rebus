@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rebus/static/css/main.5f361e03.chunk.css",
+    "main.js": "/rebus/static/js/main.cdcb023d.chunk.js",
+    "main.js.map": "/rebus/static/js/main.cdcb023d.chunk.js.map",
+    "runtime-main.js": "/rebus/static/js/runtime-main.6150ff08.js",
+    "runtime-main.js.map": "/rebus/static/js/runtime-main.6150ff08.js.map",
+    "static/js/2.ca149ba1.chunk.js": "/rebus/static/js/2.ca149ba1.chunk.js",
+    "static/js/2.ca149ba1.chunk.js.map": "/rebus/static/js/2.ca149ba1.chunk.js.map",
+    "index.html": "/rebus/index.html",
+    "precache-manifest.6e1db18d4fb940ae898ade9b00c9a4cd.js": "/rebus/precache-manifest.6e1db18d4fb940ae898ade9b00c9a4cd.js",
+    "service-worker.js": "/rebus/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/rebus/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.ca149ba1.chunk.js.LICENSE.txt": "/rebus/static/js/2.ca149ba1.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/rebus/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6150ff08.js",
+    "static/js/2.ca149ba1.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.cdcb023d.chunk.js"
+  ]
+}
