@@ -1,8 +1,13 @@
-### Rebus puzzles
+## Rebus puzzles
 
-A web page to try your hand at some Rebus puzzles! Try it out [here](https://jillbreau.github.io/rebus/ "https://jillbreau.github.io/rebus/").
+A web page to try your hand at some Rebus puzzles! **Try it out [here](https://jillbreau.github.io/rebus/ "https://jillbreau.github.io/rebus/")**.<br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+.<br />
+.<br />
+.<br />
+.<br />
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
 Special thanks to GitHub, Inc., for providing the GitHub Pages hosting functionality at no extra charge.
 
 ## Available Scripts
