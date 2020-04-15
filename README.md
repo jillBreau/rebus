@@ -1,4 +1,9 @@
+### Rebus puzzles
+
+A web page to try your hand at some Rebus puzzles! Try it out [here](https://jillbreau.github.io/rebus/ "https://jillbreau.github.io/rebus/").
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Special thanks to GitHub, Inc., for providing the GitHub Pages hosting functionality at no extra charge.
 
 ## Available Scripts
 
@@ -29,7 +34,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run deploy`
 
-This first runs `npm run build`. so the app is ready to be deployed. Then, it deploys it to the gh-pages page https://jillbreau.github.io/rebus/
+This first runs `npm run build` so the app is ready to be deployed. Then, it deploys it to the gh-pages page https://jillbreau.github.io/rebus/
 
 ### `npm run eject`
 
