@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,143 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  background: white url(background.png) repeat fixed;
+}
+
+#header {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  background-color: rgb(250, 243, 153);
+}
+
+#banner { 
+  padding: 3px 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#logo {
+  width: 190px;
+}
+
+#tryYourHand {
+  margin: 0px;
+  color: rgb(247, 76, 46);
+}
+
+#navBar { 
+  background-color: rgb(150, 150, 150); 
+  width: 100%;
+}
+
+#navBarContent {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+button {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+#navBarButtons {
+  margin-left: 22px;
+}
+
+.navBarButton {
+  background-color: transparent;
+  border-width: 2px;
+  border-style: none solid none solid;
+  border-color: white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 12pt;
+  cursor: pointer;
+  float: left;
+}
+
+.navBarButton:not(:last-child) {
+  border-right: none;
+}
+
+.navBarButton:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.navBarButton:hover {
+  background-color: rgb(27, 206, 230);
+}
+
+.contentContainer {
+  margin-top: 216px;
+  margin-bottom: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  padding: 13px;
+  background: rgb(250, 243, 153) url(border_piece.png) repeat-x;
+}
+
+
+
+
+
+/**** Home page ****/
+
+
+
+#homeButton {
+  background-color: rgb(247, 76, 46);
+}
+
+#homeButton:hover {
+  background-color: rgb(27, 206, 230);
+}
+
+#intro {
+  display: inline-block;
+  width: 40%;
+  background-color: rgb(250, 175, 131);
+  border-radius: 12px;
+  border: 1px solid rgb(138, 137, 137); 
+  padding-bottom: 8px;
+}
+
+#question {
+  color: rgb(114, 113, 113); 
+}
+
+#definition {
+  color: rgb(114, 113, 113); 
+  width: 80%;
+  margin:auto;
 }
