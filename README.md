@@ -1,6 +1,13 @@
 ## Rebus puzzles
 
-A web page to try your hand at some Rebus puzzles! **Try it out [here](https://jillbreau.github.io/rebus/ "https://jillbreau.github.io/rebus/")**.<br />
+A (work in progress) web page to try your hand at some Rebus puzzles! **Check out the work in progress [here](https://jillbreau.github.io/rebus/ "https://jillbreau.github.io/rebus/")**.<br />
+
+.<br />
+.<br />
+.<br />
+.<br />
+
+Uses Javascript with JSX, React, React Router.
 
 .<br />
 .<br />
