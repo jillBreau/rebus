@@ -1,0 +1,18 @@
+#intro {
+	display: inline-block;
+	width: 40%;
+	background-color: rgb(250, 175, 131);
+	border-radius: 12px;
+	border: 1px solid rgb(138, 137, 137); 
+	padding-bottom: 8px;
+}
+
+#question {
+	color: rgb(114, 113, 113);
+}
+
+#definition {
+	color: rgb(114, 113, 113); 
+	width: 80%;
+	margin:auto;
+}
