@@ -3,7 +3,7 @@
   "name": "Rebus Puzzles",
   "icons": [
     {
-      "src": "puzzle_piece.png",
+      "src": "icon.png",
       "sizes": "300x296",
       "type": "image/png"
     }

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a0a48fa6b1f5f54981a65e079aad2b6c",
+    "revision": "b93f9732c0ca1b2f7b0bf3539e821d41",
     "url": "/rebus/index.html"
   },
   {
-    "revision": "d76b23ff9ccc390e6cf2",
-    "url": "/rebus/static/css/main.8bfc5640.chunk.css"
+    "revision": "558c7271b73a82841611",
+    "url": "/rebus/static/css/main.96897bcb.chunk.css"
   },
   {
-    "revision": "40aa5661dcfbcc799500",
-    "url": "/rebus/static/js/2.713eac5a.chunk.js"
+    "revision": "d7bb236b98c4d616b49c",
+    "url": "/rebus/static/js/2.31ada1c7.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/rebus/static/js/2.713eac5a.chunk.js.LICENSE.txt"
+    "url": "/rebus/static/js/2.31ada1c7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d76b23ff9ccc390e6cf2",
-    "url": "/rebus/static/js/main.5148f21d.chunk.js"
+    "revision": "558c7271b73a82841611",
+    "url": "/rebus/static/js/main.b067a296.chunk.js"
   },
   {
     "revision": "b7cbb56f9cf2e81b3058",
@@ -29,10 +29,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "f0863947842a9f00460060e02f0c278a",
-    "url": "/rebus/static/media/border_piece.f0863947.png"
+    "url": "/rebus/static/media/border.f0863947.png"
   },
   {
     "revision": "71ab6a2ea4daf16ed88b67fb678512c1",
-    "url": "/rebus/static/media/rebus_logo.71ab6a2e.png"
+    "url": "/rebus/static/media/logo.71ab6a2e.png"
   }
 ]);
