@@ -19,19 +19,19 @@ class App extends React.Component {
           <div id="header">
               <div id="banner">
                   <img id="logo" src={logo} alt="'Rebus Puzzles' logo"/>
-                  <h3 id="tryYourHand">Try your hand at some rebus puzzles!!!</h3>
+                  <h3 id="tryYourHand">Try your hand at some rebus puzzles.</h3>
               </div>
               <div id="navBar">
                   <div id="navBarContent">
                       <div id="navBarButtons">
                         <nav>
-                          <NavLink activeClassName="activeLink" exact to="/">
+                          <NavLink activeClassName="activeLink" exact to="/rebus/">
                             <button className="navBarButton" id="homeButton">Home</button>
                           </NavLink>
-                          <NavLink activeClassName="activeLink" exact to="/quiz1">
+                          <NavLink activeClassName="activeLink" exact to="/rebus/quiz1">
                             <button className="navBarButton" id="quiz1Button">Quiz 1</button>
                           </NavLink>
-                          <NavLink activeClassName="activeLink" exact to="/quiz2">
+                          <NavLink activeClassName="activeLink" exact to="/rebus/quiz2">
                             <button className="navBarButton" id="quiz2Button">Quiz 2</button>
                           </NavLink>
                         </nav>
@@ -41,9 +41,9 @@ class App extends React.Component {
           </div>
 
           <Switch>
-            <Route path="/quiz1" component={Quiz1} />
-            <Route path="/quiz2" component={Quiz2} />
-            <Route path="/" component={Home} />
+            <Route path="/rebus/quiz1" component={Quiz1} />
+            <Route path="/rebus/quiz2" component={Quiz2} />
+            <Route path="/rebus/" component={Home} />
           </Switch>
         </div>
 
