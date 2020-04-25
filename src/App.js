@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
+  NavLink,
+  HashRouter
 } from "react-router-dom";
 import logo from './logo.png';
 import Home from './routes/Home/Home';
@@ -14,7 +15,7 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <HashRouter>
         <div>
           <div id="header">
               <div id="banner">
@@ -25,13 +26,13 @@ class App extends React.Component {
                   <div id="navBarContent">
                       <div id="navBarButtons">
                         <nav>
-                          <NavLink activeClassName="activeLink" exact to="/rebus/">
+                          <NavLink activeClassName="activeLink" exact to="/">
                             <button className="navBarButton" id="homeButton">Home</button>
                           </NavLink>
-                          <NavLink activeClassName="activeLink" exact to="/rebus/quiz1">
+                          <NavLink activeClassName="activeLink" exact to="/quiz1">
                             <button className="navBarButton" id="quiz1Button">Quiz 1</button>
                           </NavLink>
-                          <NavLink activeClassName="activeLink" exact to="/rebus/quiz2">
+                          <NavLink activeClassName="activeLink" exact to="/quiz2">
                             <button className="navBarButton" id="quiz2Button">Quiz 2</button>
                           </NavLink>
                         </nav>
@@ -41,14 +42,14 @@ class App extends React.Component {
           </div>
 
           <Switch>
-            <Route path="/rebus/quiz1" component={Quiz1} />
-            <Route path="/rebus/quiz2" component={Quiz2} />
-            <Route path="/rebus/" component={Home} />
+            <Route path="/quiz1" component={Quiz1} />
+            <Route path="/quiz2" component={Quiz2} />
+            <Route path="/" component={Home} />
           </Switch>
         </div>
 
         <div id="footer"></div>
-      </Router>
+      </HashRouter>
     );
   };
 };
