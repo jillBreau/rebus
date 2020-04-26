@@ -28,7 +28,7 @@ class Example extends React.Component {
           src={exampleImg} 
           alt="A rectangle with the word THINK to the right of it.">
         </PuzzleImg>
-        <button class="styledButton" id="answerButton" onClick={() => this.toggleAnswer()}>Show the answer</button>
+        <button className="styledButton" id="answerButton" onClick={() => this.toggleAnswer()}>Show the answer</button>
         {
           answerDisplaying && 
           <h4 id="exampleAnswer">The answer is "Think outside the box", because we see the word "THINK" outside of the image of a box.</h4>

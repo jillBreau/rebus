@@ -29,7 +29,7 @@ class Home extends React.Component {
           <h3 id="definition">
             A rebus is a puzzle device which combines the use of illustrated pictures with individual letters to depict words and/or phrases.<br/> Read more <a href="https://en.wikipedia.org/wiki/Rebus" title="Rebus - Wikipedia">here</a>.
           </h3>
-          <button class="styledButton" id="exampleButton" onClick={() => this.toggleExample()}>Show an example</button>
+          <button className="styledButton" id="exampleButton" onClick={() => this.toggleExample()}>Show an example</button>
           {exampleDisplaying && <Example />}
         </div>
       </div>

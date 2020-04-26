@@ -102,7 +102,9 @@ a:last-child button {
 }
 
 .mainContent {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 	width: 45%;
 	border-radius: 12px;
 }
@@ -125,7 +127,7 @@ a:last-child button {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
-  margin: 18px 4px;
+  margin: 18px;
   border-radius: 4px;
   transition-duration: 0.4s;
 }
@@ -133,4 +135,13 @@ a:last-child button {
 .styledButton:hover {
   background-color: rgb(114, 113, 113);
   color: white;
+}
+
+input[type="text"]
+{
+  margin-top: 18px;
+  font-size:16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  color: rgb(59, 59, 59);
+  border-radius: 4px;
 }
