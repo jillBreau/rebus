@@ -1,0 +1,12 @@
+.puzzleImg {
+    width: 85%;
+    border-radius: 12px;
+}
+
+#exampleImg {
+    border: 2px solid rgb(247, 76, 46);
+}
+
+#questionImg {
+    border: 2px solid rgb(27, 206, 230);
+}

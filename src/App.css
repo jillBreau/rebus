@@ -51,6 +51,7 @@ body {
 
 button {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  cursor: pointer;
 }
 
 #navBarButtons {
@@ -100,6 +101,12 @@ a:last-child button {
   align-items: center;
 }
 
+.mainContent {
+  display: inline-block;
+	width: 45%;
+	border-radius: 12px;
+}
+
 #footer {
   position: fixed;
   bottom: 0; 
@@ -107,4 +114,23 @@ a:last-child button {
   width: 100%;
   padding: 13px;
   background: rgb(250, 243, 153) url(border.png) repeat-x;
+}
+
+.styledButton {
+  background-color: white;
+  border: 2px solid rgb(114, 113, 113);
+  color: rgb(114, 113, 113);
+  padding: 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 18px 4px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.styledButton:hover {
+  background-color: rgb(114, 113, 113);
+  color: white;
 }
