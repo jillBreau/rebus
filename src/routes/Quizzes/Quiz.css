@@ -3,6 +3,13 @@
 	border: 2px solid rgb(247, 76, 46);
 }
 
-#questionNumber {
-	color: rgb(114, 113, 113);
+.parallel {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: baseline;
+}
+
+#tryQuiz {
+	margin-top: 0px;
 }

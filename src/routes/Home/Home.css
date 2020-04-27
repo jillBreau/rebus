@@ -3,12 +3,7 @@
 	border: 2px solid rgb(27, 206, 230);
 }
 
-#question {
-	color: rgb(114, 113, 113);
-}
-
 #definition {
-	color: rgb(114, 113, 113); 
 	width: 85%;
 	margin:auto;
 }
