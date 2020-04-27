@@ -96,7 +96,6 @@ const questions = [
 
 class Quiz1 extends React.Component {
   
-
   render() {
     return (
       <div className="contentContainer">

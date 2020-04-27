@@ -9,6 +9,7 @@ import logo from './logo.png';
 import Home from './routes/Home/Home';
 import Quiz1 from './routes/Quizzes/Quiz1';
 import Quiz2 from './routes/Quizzes/Quiz2';
+import Quiz3 from './routes/Quizzes/Quiz3';
 import './App.css';
 
 class App extends React.Component {
@@ -34,6 +35,9 @@ class App extends React.Component {
                           <NavLink activeClassName="activeLink" exact to="/quiz2">
                             <button className="navBarButton" id="quiz2Button">Quiz 2</button>
                           </NavLink>
+                          <NavLink activeClassName="activeLink" exact to="/quiz3">
+                            <button className="navBarButton" id="quiz3Button">Quiz 3</button>
+                          </NavLink>
                         </nav>
                       </div>
                   </div>
@@ -43,6 +47,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/quiz1" component={Quiz1} />
             <Route path="/quiz2" component={Quiz2} />
+            <Route path="/quiz3" component={Quiz3} />
             <Route path="/" component={Home} />
           </Switch>
         </div>
