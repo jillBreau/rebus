@@ -26,7 +26,7 @@ class Example extends React.Component {
         <PuzzleImg
           id="exampleImg"
           src={exampleImg} 
-          alt="A rectangle with the word THINK to the right of it.">
+          alt='A rectangle with the word "THINK" to the right of it.'>
         </PuzzleImg>
         <button className="styledButton" id="answerButton" onClick={() => this.toggleAnswer()}>Show the answer</button>
         {

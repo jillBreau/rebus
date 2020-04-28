@@ -40,7 +40,7 @@ const questions = [
     src: q_4,
     alt: 'The letters "TEEF". Under that, the letters "TEEF".',
     correct: 'Two left feet',
-    possibilities: ['twoleftfeet'],
+    possibilities: ['twoleftfeet', '2leftfeet'],
     attempts: 0
   },
   {
@@ -62,7 +62,7 @@ const questions = [
     src: q_7,
     alt: 'The word "DICE". Under that, the word "DICE".',
     correct: 'Paradise',
-    possibilities: ['paradise'],
+    possibilities: ['paradise', 'aparadise'],
     attempts: 0
   },
   {
@@ -76,7 +76,7 @@ const questions = [
     src: q_9,
     alt: 'The word "ISSUE" written ten times.',
     correct: 'Tennis shoes',
-    possibilities: ['tennisshoes'],
+    possibilities: ['tennisshoes', 'tennisshoe'],
     attempts: 0
   },
   {
