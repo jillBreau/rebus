@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* #root: {
+  display: 'flex';
+}, */
+
 #header {
   position: fixed;
   top: 0; 
@@ -49,6 +53,7 @@ body {
   text-align: left;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: baseline;
 }
 
@@ -83,12 +88,18 @@ a:last-child button {
   border-right: solid 2px;
 }
 
-#navBarButtons .activeLink button {
+.navBarButtons .activeLink button {
   background-color: rgb(247, 76, 46);
 }
 
-#navBarButtons .activeLink button:hover {
+.navBarButtons .activeLink button:hover {
   background-color: rgb(27, 206, 230);
+}
+
+#instructions {
+  width: 250px;
+  margin-top: 250px;
+  /* flex-shrink: 0; */
 }
 
 .contentContainer {

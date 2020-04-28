@@ -1,4 +1,7 @@
 import React from 'react';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
 import {
   Switch,
   Route,
@@ -15,10 +18,38 @@ import Quiz3 from './routes/Quizzes/Quiz3';
 import './App.css';
 
 class App extends React.Component {
+  state = {
+    instructionsOpen: false
+  };
+
+  toggleInstructions = (instructionsOpen) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    this.setState({instructionsOpen: instructionsOpen});
+  };
+
+  list = (
+    <div
+      id="instructionsContent"
+      role="presentation"
+      onClick={this.toggleInstructions(false)}
+      onKeyDown={this.toggleInstructions(false)}
+    >
+      <h3>Instructions</h3>
+      <List>
+      </List>
+      <Divider />
+      <List>
+      </List>
+    </div>
+  );
+
   render() {
     return (
       <HashRouter>
-        <div>
+        <div >
           <div id="header">
               <div id="banner">
                   <img id="logo" src={logo} alt="'Rebus Puzzles' logo"/>
@@ -26,7 +57,7 @@ class App extends React.Component {
               </div>
               <div id="navBar">
                   <div id="navBarContent">
-                      <div id="navBarButtons">
+                      <div className="navBarButtons">
                         <nav>
                           <NavLink activeClassName="activeLink" exact to="/">
                             <button className="navBarButton" id="homeButton"><FontAwesomeIcon icon={faHome} /></button>
@@ -41,6 +72,14 @@ class App extends React.Component {
                             <button className="navBarButton" id="quiz3Button">Quiz 3</button>
                           </NavLink>
                         </nav>
+                      </div>
+                      <div className="navBarButtons">
+                        <React.Fragment key="right">
+                          <button className="navBarButton" id="instructionsButton" onClick={this.toggleInstructions(true)}>Instructions</button>
+                          <Drawer id="instructions" anchor="right" open={this.state.instructionsOpen} onClose={this.toggleInstructions(false)}>
+                            {this.list}
+                          </Drawer>
+                        </React.Fragment>
                       </div>
                   </div>
               </div>
