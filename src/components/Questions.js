@@ -94,21 +94,21 @@ class Questions extends React.Component {
       }
       {
         (!submitted && !giveUp && !quizComplete) &&
-        <div class="parallel">
+        <div className="parallel">
           <input type="text" id="answer" name="answer" placeholder="Your answer"></input>
           <button className="styledButton" onClick={() => this.checkAnswer()}>Submit</button>
         </div>
       }
       {
         (submitted && correct && !giveUp && !quizComplete) &&
-        <div class="parallel">
+        <div className="parallel">
           <h4>Correct! The answer is "{questions[q].correct}".</h4>
           <button className="styledButton" onClick={() => this.nextQuestion()}>Next</button>
         </div>
       }
       {
         (submitted && !correct && !giveUp && !quizComplete) &&
-        <div class="parallel">
+        <div className="parallel">
           <h4>Incorrect... that was your {this.ordinalSuffix(questions[q].attempts)} attempt.</h4>
           <button className="styledButton" onClick={() => this.tryAgain()}>Try again</button>
           <button className="styledButton" onClick={() => this.showAnswer()}>Show answer</button>
@@ -116,7 +116,7 @@ class Questions extends React.Component {
       }
       {
         (submitted && giveUp && !quizComplete) &&
-        <div class="parallel">
+        <div className="parallel">
           <h4>The answer is "{questions[q].correct}".</h4>
           <button className="styledButton" onClick={() => this.nextQuestion()}>Next</button>
         </div>

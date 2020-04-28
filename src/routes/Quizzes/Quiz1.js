@@ -88,8 +88,7 @@ const questions = [
     alt: 'The word "GROUND". Under it, the word "FEET" written six times.',
     correct: 'Six feet underground',
     possibilities: ["sixfeetunderground", "6feetunderground",
-                    "sixftunderground", "6ftunderground",
-                    "six'underground", "6'underground",],
+                    "sixftunderground", "6ftunderground"],
     attempts: 0
   }
 ]
@@ -101,7 +100,6 @@ class Quiz1 extends React.Component {
       <div className="contentContainer">
         <div className="mainContent" id="questions">
           <Questions questions={questions} quizNumber={1} nextQuizNumber={2}></Questions>
-
 
           <Switch>
             <Route path="/quiz2" component={Quiz2} />
