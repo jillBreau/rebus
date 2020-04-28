@@ -54,10 +54,6 @@ button {
   cursor: pointer;
 }
 
-#navBarButtons {
-  margin-left: 22px;
-}
-
 .navBarButton {
   background-color: transparent;
   border-width: 2px;
