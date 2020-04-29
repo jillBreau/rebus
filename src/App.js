@@ -6,6 +6,8 @@ import {
   HashRouter
 } from "react-router-dom";
 import logo from './logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 import Home from './routes/Home/Home';
 import Quiz1 from './routes/Quizzes/Quiz1';
 import Quiz2 from './routes/Quizzes/Quiz2';
@@ -27,7 +29,7 @@ class App extends React.Component {
                       <div id="navBarButtons">
                         <nav>
                           <NavLink activeClassName="activeLink" exact to="/">
-                            <button className="navBarButton" id="homeButton">Home</button>
+                            <button className="navBarButton" id="homeButton"><FontAwesomeIcon icon={faHome} /></button>
                           </NavLink>
                           <NavLink activeClassName="activeLink" exact to="/quiz1">
                             <button className="navBarButton" id="quiz1Button">Quiz 1</button>

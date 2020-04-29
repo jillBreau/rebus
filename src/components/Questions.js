@@ -88,13 +88,13 @@ class Questions extends React.Component {
       {
         (!quizComplete) &&
         <div>
-          <h1 id="questionNumber">Quiz {quizNumber} - Question {q + 1}</h1>
+          <h1 id="questionNumber">Quiz {quizNumber}<br/>Question {q + 1}</h1>
           <PuzzleImg id="questionImg" src={questions[q].src} alt={questions[q].alt}></PuzzleImg>
         </div>
       }
       {
         (!submitted && !giveUp && !quizComplete) &&
-        <div className="parallel">
+        <div className="parallelInput">
           <input type="text" id="answer" name="answer" placeholder="Your answer"></input>
           <button className="styledButton" onClick={() => this.checkAnswer()}>Submit</button>
         </div>
@@ -109,7 +109,7 @@ class Questions extends React.Component {
       {
         (submitted && !correct && !giveUp && !quizComplete) &&
         <div className="parallel">
-          <h4>Incorrect... that was your {this.ordinalSuffix(questions[q].attempts)} attempt.</h4>
+          <h4>Incorrect...<br/>that was your<wbr/> {this.ordinalSuffix(questions[q].attempts)} attempt.</h4>
           <button className="styledButton" onClick={() => this.tryAgain()}>Try again</button>
           <button className="styledButton" onClick={() => this.showAnswer()}>Show answer</button>
         </div>
