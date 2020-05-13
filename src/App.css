@@ -12,16 +12,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* #root: {
-  display: 'flex';
-}, */
-
 #header {
   position: fixed;
   top: 0; 
   left: 0;
   width: 100%;
   background-color: rgb(250, 243, 153);
+  z-index: 1400;
 }
 
 #banner { 
@@ -98,8 +95,21 @@ a:last-child button {
 
 #instructions {
   width: 250px;
-  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 250px; */
   /* flex-shrink: 0; */
+}
+
+#instructionsTitle {
+  width: 250px;
+  margin-top: 180px;
+	background-color: rgb(255, 181, 159);
+}
+
+#instructionsList {
+  width: 250px;
+	background-color: rgb(170, 234, 243);
 }
 
 .contentContainer {

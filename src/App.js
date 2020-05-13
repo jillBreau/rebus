@@ -1,7 +1,6 @@
 import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import {
   Switch,
   Route,
@@ -22,31 +21,39 @@ class App extends React.Component {
     instructionsOpen: false
   };
 
-  toggleInstructions = (instructionsOpen) => (event) => {
+  toggleInstructions = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
-    this.setState({instructionsOpen: instructionsOpen});
+    this.setState({instructionsOpen: open});
   };
 
-  list = (
-    <div
-      id="instructionsContent"
-      role="presentation"
-      onClick={this.toggleInstructions(false)}
-      onKeyDown={this.toggleInstructions(false)}
-    >
-      <h3>Instructions</h3>
-      <List>
-      </List>
-      <Divider />
-      <List>
-      </List>
+  instructionsContent = (
+    <div>
+      <div
+        id="instructionsTitle"
+        role="presentation"
+        onClick={this.toggleInstructions(false)}
+        onKeyDown={this.toggleInstructions(false)}
+      >
+        <h3>Instructions and Scoring</h3>
+        
+      </div>
+      <div 
+        id="instructionsList"
+        role="presentation"
+        onClick={this.toggleInstructions(false)}
+        onKeyDown={this.toggleInstructions(false)}
+      >
+        <List>
+          <p>These are the instructions and the scoring information.</p>
+        </List>
+      </div>
     </div>
   );
 
   render() {
+    const { instructionsOpen } = this.state;
     return (
       <HashRouter>
         <div >
@@ -75,9 +82,9 @@ class App extends React.Component {
                       </div>
                       <div className="navBarButtons">
                         <React.Fragment key="right">
-                          <button className="navBarButton" id="instructionsButton" onClick={this.toggleInstructions(true)}>Instructions</button>
-                          <Drawer id="instructions" anchor="right" open={this.state.instructionsOpen} onClose={this.toggleInstructions(false)}>
-                            {this.list}
+                          <button className="navBarButton" id="instructionsButton" onClick={this.toggleInstructions(!instructionsOpen)}>Instructions</button>
+                          <Drawer id="instructions" anchor="right" open={instructionsOpen} onClose={this.toggleInstructions(false)}>
+                            {this.instructionsContent}
                           </Drawer>
                         </React.Fragment>
                       </div>
