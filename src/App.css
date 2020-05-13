@@ -1,6 +1,7 @@
 html {
   min-height: 100%;
   position: relative;
+  overflow-y: scroll;
 }
 
 body {
@@ -20,12 +21,13 @@ body {
 }
 
 #banner { 
-  padding: 3px 25px;
+  padding: 5px 25px;
   text-align: left;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
 #logo {
@@ -35,6 +37,7 @@ body {
 #tryYourHand {
   margin: 0px;
   color: rgb(247, 76, 46);
+  text-align: right;
 }
 
 #navBar { 
@@ -97,12 +100,24 @@ a:last-child button {
   align-items: center;
 }
 
-.mainContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-	width: 45%;
-	border-radius: 12px;
+@media screen and (orientation: landscape) {
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 12px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    border-radius: 12px;
+  }
 }
 
 #footer {
@@ -123,9 +138,13 @@ a:last-child button {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
-  margin: 18px 0px 18px 18px;
+  margin: 18px;
   border-radius: 4px;
   transition-duration: 0.4s;
+}
+
+#tryAgainButton {
+  margin-right: 0px;
 }
 
 .styledButton:hover {
