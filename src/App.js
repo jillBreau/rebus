@@ -1,6 +1,5 @@
 import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
 import {
   Switch,
   Route,
@@ -29,7 +28,7 @@ class App extends React.Component {
   };
 
   instructionsContent = (
-    <div>
+    <div id="instructionsContent">
       <div
         id="instructionsTitle"
         role="presentation"
@@ -45,9 +44,9 @@ class App extends React.Component {
         onClick={this.toggleInstructions(false)}
         onKeyDown={this.toggleInstructions(false)}
       >
-        <List>
-          <p>These are the instructions and the scoring information.</p>
-        </List>
+        <p>Each Quiz has ten questions.</p>
+        <p>You get one point per question for answering it on the first try, or half a point per question for answering it on the second try.</p>
+        <p>You can try each question an unlimited amount of times, for fun, before clicking "Show answer".</p>
       </div>
     </div>
   );
