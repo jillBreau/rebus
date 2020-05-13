@@ -110,7 +110,7 @@ class Questions extends React.Component {
         (submitted && !correct && !giveUp && !quizComplete) &&
         <div className="parallel">
           <h4>Incorrect...<br/>that was your<wbr/> {this.ordinalSuffix(questions[q].attempts)} attempt.</h4>
-          <button className="styledButton" onClick={() => this.tryAgain()}>Try again</button>
+          <button className="styledButton" id="tryAgainButton" onClick={() => this.tryAgain()}>Try again</button>
           <button className="styledButton" onClick={() => this.showAnswer()}>Show answer</button>
         </div>
       }

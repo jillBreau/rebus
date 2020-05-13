@@ -1,6 +1,7 @@
 html {
   min-height: 100%;
   position: relative;
+  overflow-y: scroll;
 }
 
 body {
@@ -142,7 +143,7 @@ a:last-child button {
   transition-duration: 0.4s;
 }
 
-.styledButton:not(:last-child) {
+#tryAgainButton {
   margin-right: 0px;
 }
 
