@@ -1,4 +1,5 @@
 import React from 'react';
+import Drawer from '@material-ui/core/Drawer';
 import {
   Switch,
   Route,
@@ -15,10 +16,46 @@ import Quiz3 from './routes/Quizzes/Quiz3';
 import './App.css';
 
 class App extends React.Component {
+  state = {
+    instructionsOpen: false
+  };
+
+  toggleInstructions = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    this.setState({instructionsOpen: open});
+  };
+
+  instructionsContent = (
+    <div id="instructionsContent">
+      <div
+        id="instructionsTitle"
+        role="presentation"
+        onClick={this.toggleInstructions(false)}
+        onKeyDown={this.toggleInstructions(false)}
+      >
+        <h3>Instructions and Scoring</h3>
+        
+      </div>
+      <div 
+        id="instructionsList"
+        role="presentation"
+        onClick={this.toggleInstructions(false)}
+        onKeyDown={this.toggleInstructions(false)}
+      >
+        <p>Each Quiz has ten questions.</p>
+        <p>You get one point per question for answering it on the first try, or half a point per question for answering it on the second try.</p>
+        <p>You can try each question an unlimited amount of times, for fun, before clicking "Show answer".</p>
+      </div>
+    </div>
+  );
+
   render() {
+    const { instructionsOpen } = this.state;
     return (
       <HashRouter>
-        <div>
+        <div >
           <div id="header">
               <div id="banner">
                   <img id="logo" src={logo} alt="'Rebus Puzzles' logo"/>
@@ -26,7 +63,7 @@ class App extends React.Component {
               </div>
               <div id="navBar">
                   <div id="navBarContent">
-                      <div id="navBarButtons">
+                      <div className="navBarButtons">
                         <nav>
                           <NavLink activeClassName="activeLink" exact to="/">
                             <button className="navBarButton" id="homeButton"><FontAwesomeIcon icon={faHome} /></button>
@@ -41,6 +78,14 @@ class App extends React.Component {
                             <button className="navBarButton" id="quiz3Button">Quiz 3</button>
                           </NavLink>
                         </nav>
+                      </div>
+                      <div className="navBarButtons">
+                        <React.Fragment key="right">
+                          <button className="navBarButton" id="instructionsButton" onClick={this.toggleInstructions(!instructionsOpen)}>Instructions</button>
+                          <Drawer id="instructions" anchor="right" open={instructionsOpen} onClose={this.toggleInstructions(false)}>
+                            {this.instructionsContent}
+                          </Drawer>
+                        </React.Fragment>
                       </div>
                   </div>
               </div>
