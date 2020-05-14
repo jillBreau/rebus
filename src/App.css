@@ -86,6 +86,10 @@ a:last-child button {
   border-right: solid 2px;
 }
 
+#instructionsButton {
+  border-right: solid 2px;
+}
+
 .navBarButtons .activeLink button {
   background-color: rgb(247, 76, 46);
 }
@@ -105,7 +109,7 @@ a:last-child button {
   background-color: rgb(255, 181, 159);
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  height: 100%;
   }
 }
 
@@ -115,7 +119,7 @@ a:last-child button {
     background-color: rgb(255, 181, 159);
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    height: 100%;
   }
 }
 
@@ -131,13 +135,26 @@ a:last-child button {
   flex-grow: 40;
 }
 
-.contentContainer {
-  margin-top: 216px;
-  margin-bottom: 80px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media screen and (orientation: landscape) {
+  .contentContainer {
+    margin-top: 216px;
+    margin-bottom: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .contentContainer {
+    margin-top: 255px;
+    margin-bottom: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (orientation: landscape) {
