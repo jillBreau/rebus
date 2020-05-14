@@ -61,7 +61,7 @@ const questions = [
     src: q_6,
     alt: 'The word "YOU" horizontally. Beside it, the word "JUST" vertically. Beside that, the word "ME" horizontally.',
     correct: 'Just between you and me',
-    possibilities: ['justbetweenyouandme']
+    possibilities: ['justbetweenyouandme', 'justbetweenyou&me', 'justbetweenyou+me']
   },
   {
     src: q_7,

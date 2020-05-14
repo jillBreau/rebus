@@ -115,7 +115,9 @@ class Questions extends React.Component {
       {
         (!submitted && !giveUp && !quizComplete) &&
         <div className="parallelInput">
-          <input type="text" id="answer" name="answer" placeholder="Your answer"></input>
+          <form onSubmit={() => this.checkAnswer()}>
+            <input type="text" id="answer" name="answer" placeholder="Your answer"></input>
+          </form>
           <button className="styledButton" onClick={() => this.checkAnswer()}>Submit</button>
         </div>
       }

@@ -25,7 +25,7 @@ const questions = [
     src: q_2,
     alt: '"B10" written in half blue font on the top, half black font on the bottom.',
     correct: 'Beaten black and blue',
-    possibilities: ['beatenblackandblue']
+    possibilities: ['beatenblackandblue', 'beatenblack&blue', 'beatenblack+blue']
   },
   {
     src: q_3,
