@@ -24,22 +24,19 @@ const questions = [
     src: q_1,
     alt: 'The word "NOON". After it, a space. After the space, the word "GOOD".',
     correct: 'Good afternoon',
-    possibilities: ['goodafternoon'],
-    attempts: 0
+    possibilities: ['goodafternoon']
   },
   {
     src: q_2,
     alt: 'The word "CHAIR" located at the top of the image.',
     correct: 'High chair',
-    possibilities: ['highchair'],
-    attempts: 0
+    possibilities: ['highchair']
   },
   {
     src: q_3,
     alt: 'The letters "O" "U" "T" each written upside down.',
     correct: 'Flipped out',
-    possibilities: ['flippedout', 'flipout'],
-    attempts: 0
+    possibilities: ['flippedout', 'flipout']
   },
   {
     src: q_4,
@@ -52,29 +49,25 @@ const questions = [
                     'threedegreesbelowzerodegrees', '3degreesbelowzerodegrees',
                     'threedegreesbelow0degrees', '3degreesbelow0degrees',
                     'threebelowzerodegrees', '3belowzerodegrees',
-                    'threebelow0degrees', '3below0degrees'],
-    attempts: 0
+                    'threebelow0degrees', '3below0degrees']
   },
   {
     src: q_5,
     alt: 'The word "CYCLE". Under it, the word "CYCLE". Under it, the word "CYCLE".',
     correct: 'Tricycle',
-    possibilities: ['tricycle', 'atricycle'],
-    attempts: 0
+    possibilities: ['tricycle', 'atricycle']
   },
   {
     src: q_6,
     alt: 'The word "YOU" horizontally. Beside it, the word "JUST" vertically. Beside that, the word "ME" horizontally.',
     correct: 'Just between you and me',
-    possibilities: ['justbetweenyouandme'],
-    attempts: 0
+    possibilities: ['justbetweenyouandme']
   },
   {
     src: q_7,
     alt: 'The letters "LEV". After that, lower and to the right, the letters "EL".',
     correct: 'Split level',
-    possibilities: ['splitlevel', 'asplitlevel'],
-    attempts: 0
+    possibilities: ['splitlevel', 'asplitlevel']
   },
   {
     src: q_8,
@@ -82,22 +75,19 @@ const questions = [
     correct: 'Backward glance',
     possibilities: ['backwardglance', 'backwardsglance',
                     'abackwardglance', 'abackwardsglance',
-                    'glancebackward', 'glancebackwards'],
-    attempts: 0
+                    'glancebackward', 'glancebackwards']
   },
   {
     src: q_9,
     alt: 'The fraction "1/4" repeated four times right next to each other.',
     correct: 'Close quarters',
-    possibilities: ['closequarters'],
-    attempts: 0
+    possibilities: ['closequarters']
   },
   {
     src: q_10,
     alt: 'The letters "DAYSALLWORK".',
     correct: "All in a day's work",
-    possibilities: ["allinadayswork",],
-    attempts: 0
+    possibilities: ["allinadayswork",]
   }
 ]
 

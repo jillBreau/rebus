@@ -14,7 +14,7 @@ class Home extends React.Component {
     if (exampleButton.innerHTML === "Show an example") {
       exampleButton.innerHTML = "Hide the example";
     } else { 
-      exampleButton.innerHTML = "Show an example"
+      exampleButton.innerHTML = "Show an example";
     }
   };
   

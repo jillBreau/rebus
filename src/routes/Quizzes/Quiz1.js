@@ -24,72 +24,62 @@ const questions = [
     src: q_1,
     alt: 'A rectangle with the word "SAND" inside of it.',
     correct: 'Sandbox',
-    possibilities: ['sandbox', 'asandbox'],
-    attempts: 0
+    possibilities: ['sandbox', 'asandbox']
   },
   {
     src: q_2,
     alt: 'The word "MAN". Under it, a line. Under the line, the word "BOARD".',
     correct: 'Man overboard',
-    possibilities: ['manoverboard'],
-    attempts: 0
+    possibilities: ['manoverboard']
   },
   {
     src: q_3,
     alt: 'The letters "T" "O" "W" "N" stacked from top to bottom.',
     correct: 'Downtown',
-    possibilities: ['downtown'],
-    attempts: 0
+    possibilities: ['downtown']
   },
   {
     src: q_4,
     alt: 'The word "MIND". Under it, a line. Under the line, the word "MATTER".',
     correct: 'Mind over matter',
-    possibilities: ['mindovermatter'],
-    attempts: 0
+    possibilities: ['mindovermatter']
   },
   {
     src: q_5,
     alt: 'The letters "R" "E" "A" "D" all separated by vertical lines.',
     correct: 'Read between the lines',
-    possibilities: ['readbetweenthelines'],
-    attempts: 0
+    possibilities: ['readbetweenthelines']
   },
   {
     src: q_6,
     alt: 'The word "STAND". Under it, a line. Under the line, the letter "I".',
     correct: 'I understand',
-    possibilities: ['iunderstand'],
-    attempts: 0
+    possibilities: ['iunderstand']
   },
   {
     src: q_7,
     alt: 'The word "ROAD" written once vertically and once horizontally, intersecting.',
     correct: 'Crossroads',
-    possibilities: ['crossroad', 'acrossroad', 'crossroads', 'acrossroads'],
-    attempts: 0
+    possibilities: ['crossroad', 'acrossroad', 'crossroads', 'acrossroads']
   },
   {
     src: q_8,
     alt: 'The word "WEAR". Under it, a line. Under the line, the letter "LONG".',
     correct: 'Long underwear',
-    possibilities: ['longunderwear'],
-    attempts: 0
+    possibilities: ['longunderwear']
   },
   {
     src: q_9,
     alt: 'The letters "T" "O" "U" "C" "H" stacked from top to bottom.',
     correct: 'Touchdown',
-    possibilities: ['touchdown', 'atouchdown'],
-    attempts: 0
+    possibilities: ['touchdown', 'atouchdown']
   },
   {
     src: q_10,
     alt: 'The word "GROUND". Under it, the word "FEET" written six times.',
     correct: 'Six feet underground',
     possibilities: ["sixfeetunderground", "6feetunderground",
-                    "sixftunderground", "6ftunderground"],
-    attempts: 0
+                    "sixftunderground", "6ftunderground"]
   }
 ]
 

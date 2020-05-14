@@ -11,7 +11,10 @@ class Questions extends React.Component {
     giveUp: false,
     q: 0,
     quizComplete: false,
-    questions: this.props.questions
+    questions: this.props.questions,
+    quizScore: 0,
+    questionAttempts: 0,
+    questionScore: 0
   };
 
   simplifyString(theirAnswer) {
@@ -28,13 +31,27 @@ class Questions extends React.Component {
   };
 
   checkAnswer() {
-    const { q, questions } = this.state;
+    const { q, questions, questionAttempts } = this.state;
     const theirAnswer = document.getElementById('answer').value;
+    
+    const attemptsUpdated = questionAttempts + 1;
+    this.setState({submitted: true, questionAttempts: attemptsUpdated});
+
     if (questions[q].possibilities.includes(this.simplifyString(theirAnswer))) {
       this.setState({correct: true});
+      this.questionPoints(attemptsUpdated);
     }
-    this.setState({submitted: true});
-    questions[q].attempts = questions[q].attempts + 1;
+  }
+
+  questionPoints(questionAttempts) {
+    const {quizScore} = this.state;
+    let points = 0;
+    if (questionAttempts === 1) {
+      points = 1;
+    } else if (questionAttempts === 2) {
+      points = 0.5;
+    }
+    this.setState({quizScore: quizScore + points, questionScore: points});
   }
 
   nextQuestion() {
@@ -44,7 +61,9 @@ class Questions extends React.Component {
         submitted: false,
         correct: false,
         giveUp: false,
-        q: q + 1
+        q: q + 1,
+        questionAttempts: 0,
+        questionPoints: 0
       });
     } else {
       this.setState({
@@ -80,7 +99,8 @@ class Questions extends React.Component {
   };
 
   render() {
-    const { submitted, correct, giveUp, q, quizComplete, questions } = this.state;
+    const { submitted, correct, giveUp, q, quizComplete, questions, quizScore, questionAttempts, questionScore } = this.state;
+    const questionNumber = q + 1;
     const { quizNumber, nextQuizNumber } = this.props;
     const nextQuizPath = `/quiz${nextQuizNumber}`;
     return (
@@ -88,7 +108,7 @@ class Questions extends React.Component {
       {
         (!quizComplete) &&
         <div>
-          <h1 id="questionNumber">Quiz {quizNumber}<br/>Question {q + 1}</h1>
+          <h1 id="questionNumber">Quiz {quizNumber}<br/>Question {questionNumber}</h1>
           <PuzzleImg id="questionImg" src={questions[q].src} alt={questions[q].alt}></PuzzleImg>
         </div>
       }
@@ -102,14 +122,15 @@ class Questions extends React.Component {
       {
         (submitted && correct && !giveUp && !quizComplete) &&
         <div className="parallel">
-          <h4>Correct! The answer is "{questions[q].correct}".</h4>
-          <button className="styledButton" onClick={() => this.nextQuestion()}>Next</button>
+          <h4>Correct! The answer is "{questions[q].correct}".<br/>
+          {questionScore}/1 points for Question {questionNumber}.</h4>
+          <button className="styledButton" id="correctNext" onClick={() => this.nextQuestion()}>Next</button>
         </div>
       }
       {
         (submitted && !correct && !giveUp && !quizComplete) &&
         <div className="parallel">
-          <h4>Incorrect...<br/>that was your<wbr/> {this.ordinalSuffix(questions[q].attempts)} attempt.</h4>
+          <h4>Incorrect...<br/>that was your<wbr/> {this.ordinalSuffix(questionAttempts)} attempt.</h4>
           <button className="styledButton" id="tryAgainButton" onClick={() => this.tryAgain()}>Try again</button>
           <button className="styledButton" onClick={() => this.showAnswer()}>Show answer</button>
         </div>
@@ -117,23 +138,31 @@ class Questions extends React.Component {
       {
         (submitted && giveUp && !quizComplete) &&
         <div className="parallel">
-          <h4>The answer is "{questions[q].correct}".</h4>
-          <button className="styledButton" onClick={() => this.nextQuestion()}>Next</button>
+          <h4>The answer is "{questions[q].correct}".<br/>
+          0/1 points for Question {questionNumber}.</h4>
+          <button className="styledButton" id="giveUpNext" onClick={() => this.nextQuestion()}>Next</button>
         </div>
       }
       {
         (quizComplete) &&
         <div>
-          <h4>Congratulations! You have completed Quiz {quizNumber}.</h4>
+          <h4>Congratulations! You have completed Quiz {quizNumber}.<br/>
+          Your score is {quizScore}/10 points.</h4>
           {
             (nextQuizNumber) &&
-            <NavLink activeClassName="activeLink" exact to={nextQuizPath}>
-              <button className="styledButton" id="tryQuiz">Try Quiz {nextQuizNumber}</button>
-            </NavLink>
+            <div>
+              <button className="styledButton" id="retryQuiz" onClick={() => window.location.reload()}>Retry Quiz {quizNumber}</button>
+              <NavLink activeClassName="activeLink" exact to={nextQuizPath}>
+                <button className="styledButton" id="tryQuiz">Try Quiz {nextQuizNumber}</button>
+              </NavLink>
+            </div>
           }
           {
             (!nextQuizNumber) &&
-            <h4>This is the last quiz. Thank you for playing Rebus Puzzles!</h4>
+            <div>
+              <h4>This is the last quiz. Thank you for playing Rebus Puzzles!</h4>
+              <button className="styledButton" id="retryQuiz" onClick={() => window.location.reload()}>Retry Quiz {quizNumber}</button>
+            </div>
           }
         </div>
       }
