@@ -19,72 +19,62 @@ const questions = [
     src: q_1,
     alt: 'The word "KNEE". Under that, the word "LIGHTS".',
     correct: 'Neon lights',
-    possibilities: ['neonlights'],
-    attempts: 0
+    possibilities: ['neonlights']
   },
   {
     src: q_2,
     alt: '"B10" written in half blue font on the top, half black font on the bottom.',
     correct: 'Beaten black and blue',
-    possibilities: ['beatenblackandblue'],
-    attempts: 0
+    possibilities: ['beatenblackandblue']
   },
   {
     src: q_3,
     alt: 'The word "TIME" written with very tall stretched out letters, beside the alphabet missing the letter "C".',
     correct: 'Long time no see',
-    possibilities: ['longtimenosee'],
-    attempts: 0
+    possibilities: ['longtimenosee']
   },
   {
     src: q_4,
     alt: 'The letters "TEEF". Under that, the letters "TEEF".',
     correct: 'Two left feet',
-    possibilities: ['twoleftfeet', '2leftfeet'],
-    attempts: 0
+    possibilities: ['twoleftfeet', '2leftfeet']
   },
   {
     src: q_5,
     alt: 'The letters "NEAFRIENDED".',
     correct: 'A friend in need',
-    possibilities: ['afriendinneed'],
-    attempts: 0
+    possibilities: ['afriendinneed']
   },
   {
     src: q_6,
     alt: 'The letter "O", a blank space, the letters "ER", a blank space, the letter "T", a blank space, the letter "O", and a blank space.',
     correct: 'Painless operation',
     possibilities: ['painlessoperation', 'painfreeoperation',
-                    'apainlessoperation', 'apainfreeoperation'],
-    attempts: 0
+                    'apainlessoperation', 'apainfreeoperation']
   },
   {
     src: q_7,
     alt: 'The word "DICE". Under that, the word "DICE".',
     correct: 'Paradise',
-    possibilities: ['paradise', 'aparadise'],
-    attempts: 0
+    possibilities: ['paradise', 'aparadise']
   },
   {
     src: q_8,
     alt: 'The letters "T" "O" "L" "B" stacked from top to bottom, and a checkmark to the right of it.',
     correct: 'Bolt upright',
-    possibilities: ['boltupright'],
-    attempts: 0
+    possibilities: ['boltupright']
   },
   {
     src: q_9,
     alt: 'The word "ISSUE" written ten times.',
     correct: 'Tennis shoes',
-    possibilities: ['tennisshoes', 'tennisshoe'],
-    attempts: 0
+    possibilities: ['tennisshoes', 'tennisshoe']
   },
   {
     src: q_10,
     alt: 'A big letter "C" with the letters "B" "L" "O" "U" "S" "E" spelled down the spine.',
     correct: 'See-through blouse',
-    possibilities: ['seethroughblouse', 'aseethroughblouse'],
-    attempts: 0
+    possibilities: ['seethroughblouse', 'aseethroughblouse']
   }
 ]
 
