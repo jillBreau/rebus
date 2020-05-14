@@ -26,6 +26,8 @@ class Questions extends React.Component {
     simpleAnswer = simpleAnswer.replace(/'/g, '');
     simpleAnswer = simpleAnswer.replace(/"/g, '');
     simpleAnswer = simpleAnswer.replace(/,/g, '');
+    simpleAnswer = simpleAnswer.replace(/‘/g, '');
+    simpleAnswer = simpleAnswer.replace(/’/g, '');
 
     return simpleAnswer;
   };
