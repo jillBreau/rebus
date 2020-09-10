@@ -4,7 +4,7 @@ permalink: /index.html
 
 ## Rebus puzzles
 
-A web page to try your hand at some Rebus puzzles! **Check it out [here](https://jillbreau.github.io/rebus/ "https://jillbreau.github.io/rebus/")**.<br />
+A web site to try your hand at some Rebus puzzles! **Check it out [here](https://jillbreau.github.io/rebus/ "https://jillbreau.github.io/rebus/")**.<br />
 
 .<br />
 .<br />
